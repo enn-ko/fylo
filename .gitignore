@@ -16,3 +16,4 @@
 *.md
 /design
 .node_modules
+/.idea

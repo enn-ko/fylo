@@ -1,38 +1,133 @@
 <!DOCTYPE html>
+<div class="loader-container" style="z-index: 2000">
+  <div class="loader">Loading...</div>
+</div>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Enn Ko">
+  <meta name="description" content="Fylo landing page">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Fylo landing page with two column layout</title>
   <link rel="stylesheet" href="./css/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+ 
+<style>
+.loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
 
+}
+.loader {
+  color: var(--primary);
+  font-size: 20px;
+  margin: 100px auto;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load4 1.3s infinite linear;
+  animation: load4 1.3s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@-webkit-keyframes load4 {
+  0%,
+  100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+@keyframes load4 {
+  0%,
+  100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+</style>
 </head>
 <body  class="bg-white">
 
   <div class="container-fluid">
     <div class="row min-vh-100 justify-content-center">
 
-          <header class="col-11 ">
-            <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+          <header class="col-12 col-md-11 animated slideInDown ani-delay-1">
+            <nav class="navbar 
+            navbar-expand-lg 
+            navbar-light 
+            d-flex 
+            justify-content-between 
+            py-3">
+
               <a class="navbar-brand" href="#">
                 <img src="./images/logo.svg" class="logo" alt="fylo logo">
               </a>
             
               <div id="navbarNav">
                 <ul class="navbar-nav flex-row">
-                  <li class="nav-item px-3">
-                    <a class="nav-link" href="#features">Features <span class="sr-only">(current)</span></a>
+                  <li class="nav-item px-1 px-md-3 mb-0">
+                    <a class="nav-link" href="#features">Features 
+                      <span class="sr-only">(current)</span>
+                    </a>
                   </li>
-                  <li class="nav-item px-3">
+                  <li class="nav-item px-2 px-md-3 mb-0">
                     <a class="nav-link" href="#team">Team</a>
                   </li>
-                  <li class="nav-item px-3">
+                  <li class="nav-item px-2 px-md-3 mb-0">
                     <a class="nav-link" href="#sign">Sign in</a>
                   </li>
                 </ul>
@@ -42,13 +137,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 
           <section class="col-11 my-5" id="feature">
             <div class="row justify-content-between align-items-center reverse">
-              <div class="col-12 col-lg-6 mt-3 mt-md-0 center">
+              <div class="col-12 col-lg-6 mt-3 mt-md-0 center animated slideInLeft ani-delay-2">
                 <h1 class="sr-only">Features</h1>
                 <h2 class="font-weight-bold mb-3 ">
                   All your files in one secure location, accessible anywhere.
                 </h2>
                 <p class="">
-                  Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends,family, and co-workers.
+                  Fylo stores your most important files in one secure location. 
+                  Access them wherever you need, share and collaborate with friends,family, and co-workers.
                 </p>
 
                <div class="row align-items-start mt-4">
@@ -59,13 +155,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
                   placeholder="Enter your email">
                   <p class="hide d-none">Please check your email</p>
                 </div>
+
                 <div class="start col-12 col-lg-5 my-3 my-lg-0">
-                  <button class="btn btn-success btn-lg w-100"><a href="#" class="text-white">Get Start</a></button>
+                  <button class="btn btn-success btn-lg w-100">
+                    <a href="#" class="text-white">Get Start</a>
+                  </button>
                 </div>
               </div>
                </div>
+
               <div class="col-12 col-lg-5 ml-0 mb-5 mb-lg-0 ml-lg-5">
-                <img src="./images/illustration-1.svg" alt="" aria-hidden="true">
+                <img src="./images/illustration-1.svg" class="animated slideInRight ani-delay-3" alt="" aria-hidden="true">
               </div>
             </div>
           </section>
@@ -75,27 +175,47 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             <div class="justify-content-center row" id="team-container">
               <div class="col-11 my-5">
                 <div class="row pt-5 justify-content-between align-items-center  reverse">
-                  <div class="col-12 col-lg-6 center">
+                  <div class="col-12 col-lg-6 center ">
+
                     <div class="">
                       <h2 class="mb-3 font-weight-bold">
                         Stay productive, wherever you are
                       </h2>
+
                       <p>
-                        Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.
+                        Never let location be an issue when accessing your files. 
+                        Fylo has you covered for all of your file storage needs.
                       </p>
+
                       <p>
-                        Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!
+                        Securely share files and folders with friends, 
+                        family and colleagues for live collaboration. No email attachments required!
                       </p>
+
                       <button class="bg-white p-2 border-bottom ">
                         <a href="#" class="text-info py-2">See how Fylo works</a> <img src="./images/icon-arrow.svg" alt="">
                       </button>
                     </div>
-                    <div class="quote w-75 card border-0 shadow-lg p-3 mt-5 text-left mauto">
+                    <div class="card 
+                    w-75 
+                    quote
+                    border-0
+                    shadow-lg
+                    p-3
+                    mt-5
+                    text-left
+                    mauto
+                    wow
+                    fadeIn
+                    ani-delay-3">
+
                       <div class="card-body">
                         <img src="./images/icon-quotes.svg" class="d-block mb-3" alt="" aria-hidden="true">
                         <span>
-                          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration macthine.
+                          Fylo has improved our team productivity by an order of magnitude. 
+                          Since making the switch our team has become a well-oiled collaboration macthine.
                         </span>
+
                         <div class="profile align-items-center my-3 d-flex">
                         <img src="./images/avatar-testimonial.jpg" class="h mr-3 rounded-circle" alt="Kyle Burton profile">
                         <div class="profile-content">
@@ -104,10 +224,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
                         </div>
                         </div>
                       </div>
+
                     </div>
                   </div>
                   <div class="col-12 col-lg-5 mb-5 mb-lg-0 ml-0 ml-lg-5">
-                    <img src="./images/illustration-2.svg" alt="" aria-hidden="true">
+                    <img src="./images/illustration-2.svg" class="wow slideInRight" alt="" aria-hidden="true">
                   </div>
                 </div>
               </div>
@@ -118,12 +239,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             <div class="row justify-content-center">
               <div class="col-11 my-5 py-5 ">
                 <div class="row justify-content-between align-items-center">
-                  <div class="col-12 col-lg-6 text-danger center">
+                  <div 
+                  class="col-12
+                  col-lg-6
+                  text-danger
+                  center
+                  animated
+                  slideInRight
+                  ani-delay-1">
+
                     <h2>Get early access today</h2>
                     <p>
-                      It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions. Our support team would be happy to help you.
+                      It only takes a minute to sign up and our free starter tier is extremely generous. 
+                      If you have any questions. Our support team would be happy to help you.
                     </p>
                   </div>
+
                   <div class="col-12 col-lg-5 sign-email">
                       <div class="email mb-3 w-100">
                         <label for="email"></label>
@@ -168,6 +299,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
                       <p> example@fylo.com</p>
                     </div>
                   </div>
+
                   <div class="col-12 col-md-2 footer-nav">
                     <ul class="nav-link">
                       <li class="nav-item">
@@ -184,6 +316,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
                       </li>
                     </ul>
                   </div>
+
                   <div class="col-12 col-md-2 footer-nav">
                     <ul class="nav-link">
                       <li class="nav-item">
@@ -197,6 +330,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
                       </li>
                     </ul>
                   </div>
+
                   <div class="col-12 col-md-3 footer-brands">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-twitter"></i>
@@ -209,6 +343,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           </footer>
     </div>
   </div>
+<script src="./js/jquery.js"></script>
+<script src="./js/wow.js"></script>
+<script src="./js/app.js" defer></script>
+
 
 </body>
 </html>

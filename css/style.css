@@ -57,6 +57,20 @@ a:hover{
 .h{
     height: 40px;
 }
+/* animation */
+
+.ani-delay-1{
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+}
+.ani-delay-2{
+    animation-delay: 1s;
+    animation-duration: 1s
+}
+.ani-delay-3{
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+}
 
 /* <------ Header------> */
 header{
@@ -78,6 +92,7 @@ input:focus + .hided{
     display: block !important;
     color: var(--danger);
 }
+
 /* <------team-----> */
 #team-container{
     
@@ -86,7 +101,7 @@ input:focus + .hided{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/* footer  */
 .phone img, .email img{
     height: 20px;
 }
@@ -135,5 +150,14 @@ input:focus + .hided{
     }
     .sign-email .email{
         width: 75% !important;
+    }
+}
+@media screen and (max-width:464px) {
+    .logo{
+        height: 25px;
+        width: 80px;
+    }
+    .navbarNav .nav-item{
+        font-size: 12px;
     }
 }
